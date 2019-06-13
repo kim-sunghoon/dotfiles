@@ -149,6 +149,7 @@
   rpo = remote prune origin
   rpu = remote prune upstream
 #############
+  st = status 
   ss = status --untracked-files=no -s -b
   sb = status -s -b
 #############
