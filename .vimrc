@@ -30,10 +30,6 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 "github.com/luochen1990/rainbow
 Plugin 'luochen1990/rainbow'
-"Vim auto compete
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 " csv 파일 다루기 --  github.com/chrisbra/csv.vim 
 Plugin 'chrisbra/csv.vim'
 " vim 정렬하기 - 사용법: 비쥬얼 블럭 후 gl,  비쥬얼블록친부분 왼쪽 기준 , 로 정렬! http://github.com/tommcdo/vim-lion 
@@ -48,6 +44,11 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'Yggdroot/indentLine'
 " smooth scroll
 Plugin 'terryma/vim-smooth-scroll'
+"Vim auto compete - vim8 is needed // need complie for using YoucompleteMe  
+" https://johngrib.github.io/wiki/vim-ycm-python3/
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'SirVer/ultisnips'
+" Plugin 'honza/vim-snippets'
 call vundle#end()
 " }}}
 "설정을 추가한 후에 :w로 저장한 후 변경된 .vimrc 파일을 :source % 또는 :so %
@@ -62,11 +63,11 @@ set background=dark
 let g:solarized_termcolors=256
 let g:solarized_diffmode="high"
 set term=screen-256color
-colorscheme solarized
+" colorscheme solarized
 " colorscheme distinguished
 " colorscheme xoria256
 " colorscheme molokai
-" colorscheme badwolf
+colorscheme badwolf
 " colorscheme vim-monokai-tasty
 "## More options
 set ruler
@@ -178,40 +179,41 @@ let g:NERDTreeDirArrows = 0
 let g:tagbar_compact = 1
 let g:tagbar_width = 30
 "}}}
-"YouCompleteMe {{{
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-" "To avoid conflict snippets
-let g:ycm_key_list_select_completion = ['<c-j>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<c-k>', '<Up>']
-let g:ycm_autoclose_preview_window_after_completion = 1
-" ------------------------------------------------------------
-let g:ycm_warning_symbol = '>*'
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_server_python_interpreter = '/home/tool/anaconda/install/3.5.2/bin/python'
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_python_binary_path = '/home/tool/anaconda/install/3.5.2/bin/python'
-let g:ycm_collect_identifiers_from_tags_files = 0
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_min_num_of_chars_for_completion = 1 
-" set key mapping
-nnoremap <c>g :YcmCompleter GoTo<CR>
-nnoremap <c>gg :YcmCompleter GoToImprecise<CR>
-nnoremap <c>d :YcmCompleter GoToDeclaration<CR>
-nnoremap <c>t :YcmCompleter GetType<CR>
-nnoremap <c>p :YcmCompleter GetParent<CR>
+""" YouCompleteMe {{{
+" need to compile after install 
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/.ycm_extra_conf.py'
+" let g:ycm_confirm_extra_conf = 0
+"""To avoid conflict snippets
+" let g:ycm_key_list_select_completion = ['<c-j>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<c-k>', '<Up>']
+" let g:ycm_autoclose_preview_window_after_completion = 1
+""" ------------------------------------------------------------
+" let g:ycm_warning_symbol = '>*'
+" let g:ycm_show_diagnostics_ui = 0
+" let g:ycm_server_python_interpreter = '/home/tool/anaconda/install/3.5.2/bin/python'
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_python_binary_path = '/home/tool/anaconda/install/3.5.2/bin/python'
+" let g:ycm_collect_identifiers_from_tags_files = 0
+" let g:ycm_collect_identifiers_from_comments_and_strings = 1
+" let g:ycm_complete_in_strings = 1
+" let g:ycm_complete_in_comments = 1
+" let g:ycm_min_num_of_chars_for_completion = 1 
+""" set key mapping
+" nnoremap <c>g :YcmCompleter GoTo<CR>
+" nnoremap <c>gg :YcmCompleter GoToImprecise<CR>
+" nnoremap <c>d :YcmCompleter GoToDeclaration<CR>
+" nnoremap <c>t :YcmCompleter GetType<CR>
+" nnoremap <c>p :YcmCompleter GetParent<CR>
 " from commnet in https://github.com/johngrib/simple_vim_guide/blob/master/md/vimrc.md 
 set omnifunc=syntaxcomplete#Complete
 "}}}
-" ultisnips {{{
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-let g:UltiSnipsEditSplit="vertical"
-" let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips']
-let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+"" ultisnips {{{
+" let g:UltiSnipsExpandTrigger="<Tab>"
+" let g:UltiSnipsJumpForwardTrigger="<Tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+" let g:UltiSnipsEditSplit="vertical"
+""" let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips']
+" let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 "}}}
 " Signature {{{
 let g:snips_author = $GIT_AUTHOR_NAME
