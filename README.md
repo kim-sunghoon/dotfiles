@@ -6,7 +6,7 @@
 __ONE LINER__ install with this single command:
     need to check
 ```sh
-git clone --recursive https://github.com/kim-sunghoon/dotfiles.git \
+git clone --recursive https://github.com/kim-sunghoon/dotfiles.git .dotfiles \
     && cd .dotfiles && ./bin/dfm install && vim +PluginUpdate
 ```
 
