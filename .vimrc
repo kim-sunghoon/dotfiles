@@ -180,40 +180,42 @@ let g:tagbar_compact = 1
 let g:tagbar_width = 30
 "}}}
 """ YouCompleteMe {{{
-" need to compile after install 
-" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/.ycm_extra_conf.py'
-" let g:ycm_confirm_extra_conf = 0
+""" need to compile after install --- cd ~/.vim/bundle/YouCompleteMe && python install.py --clang-completer  
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 """To avoid conflict snippets
-" let g:ycm_key_list_select_completion = ['<c-j>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<c-k>', '<Up>']
-" let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_key_list_select_completion = ['<c-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-k>', '<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 1
 """ ------------------------------------------------------------
-" let g:ycm_warning_symbol = '>*'
-" let g:ycm_show_diagnostics_ui = 0
-" let g:ycm_server_python_interpreter = '/home/tool/anaconda/install/3.5.2/bin/python'
-" let g:ycm_seed_identifiers_with_syntax = 1
-" let g:ycm_python_binary_path = '/home/tool/anaconda/install/3.5.2/bin/python'
-" let g:ycm_collect_identifiers_from_tags_files = 0
-" let g:ycm_collect_identifiers_from_comments_and_strings = 1
-" let g:ycm_complete_in_strings = 1
-" let g:ycm_complete_in_comments = 1
-" let g:ycm_min_num_of_chars_for_completion = 1 
+let g:ycm_warning_symbol = '>*'
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_seed_identifiers_with_syntax = 1
+""" python path setting - should be absolute path, then if you shoud change path when changing different nfs system... 
+let g:ycm_server_python_interpreter = '/home/tool/anaconda/install/3.5.2/bin/python'
+let g:ycm_python_binary_path = '/home/tool/anaconda/install/3.5.2/bin/python'
+
+let g:ycm_collect_identifiers_from_tags_files = 0
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_min_num_of_chars_for_completion = 1 
 """ set key mapping
-" nnoremap <c>g :YcmCompleter GoTo<CR>
-" nnoremap <c>gg :YcmCompleter GoToImprecise<CR>
-" nnoremap <c>d :YcmCompleter GoToDeclaration<CR>
-" nnoremap <c>t :YcmCompleter GetType<CR>
-" nnoremap <c>p :YcmCompleter GetParent<CR>
-" from commnet in https://github.com/johngrib/simple_vim_guide/blob/master/md/vimrc.md 
+nnoremap <c>g :YcmCompleter GoTo<CR>
+nnoremap <c>gg :YcmCompleter GoToImprecise<CR>
+nnoremap <c>d :YcmCompleter GoToDeclaration<CR>
+nnoremap <c>t :YcmCompleter GetType<CR>
+nnoremap <c>p :YcmCompleter GetParent<CR>
+""" from commnet in https://github.com/johngrib/simple_vim_guide/blob/master/md/vimrc.md 
 set omnifunc=syntaxcomplete#Complete
 "}}}
 "" ultisnips {{{
-" let g:UltiSnipsExpandTrigger="<Tab>"
-" let g:UltiSnipsJumpForwardTrigger="<Tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-" let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit="vertical"
 """ let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips']
-" let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 "}}}
 " Signature {{{
 let g:snips_author = $GIT_AUTHOR_NAME
