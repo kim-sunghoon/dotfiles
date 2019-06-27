@@ -2,15 +2,8 @@
 
 ![Alt Text](https://raw.github.com/vicentebolea/dotfiles/master/screenshot.gif "My personal configuration for the Linux terminal with 256 colors")
 
-## TL;DR
-__ONE LINER__ install with this single command:
-    need to check
-```sh
-git clone --recursive https://github.com/kim-sunghoon/dotfiles.git .dotfiles \
-    && cd .dotfiles && ./bin/dfm install && vim +PluginUpdate
-```
 
-### Features:
+## Features:
  - Only depends on GIT
  - It was designed having in mind being forked so that you can freely modify it.
  - As well if you are not going to modify you can just download it.
