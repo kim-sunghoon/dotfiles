@@ -43,11 +43,15 @@ The file should contain these lines, but change my name and email for yours:
 ```sh
 GIT_AUTHOR_NAME="Vicente Adolfo Bolea Sanchez"
 GIT_AUTHOR_EMAIL="vicenolea@gmail.com"
-
-# Also, in order to enable autocomplete features you must install YouCompletMe:
+```
+### YouCompleteMe:
+ ```sh 
+ cd ~/.vim/bundle/YouCompleteMe 
+ python install.py --clang-completer  
  
+ ```
 
-For more info about autocomplete in my configuration join the [conversation][conv].
+For more info about autocomplete see this blog (https://johngrib.github.io/wiki/vim-auto-completion/)
 
 ### How to update it
 ```sh
