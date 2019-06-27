@@ -10,3 +10,7 @@ set keymap vi-insert
 set keymap vi-command
 "gg": beginning-of-history
 "G": end-of-history
+
+
+# bash case insensitive 
+set completion-ignore-case On
