@@ -29,13 +29,14 @@ $ git clone --recursive https://github.com/kim-sunghoon/dotfiles.git .dotfiles \
 ### Personal costumization
 
 __The only configuration needed for vicente's dotfiles__ should be inside of a file 
-called `.bash_independent` in your home directory. 
+called `.gitconfig.local` in your home directory. 
 
 The file should contain these lines, but change my name and email for yours:
 
 ```sh
-GIT_AUTHOR_NAME="Vicente Adolfo Bolea Sanchez"
-GIT_AUTHOR_EMAIL="vicenolea@gmail.com"
+[user]
+    name = kim-sunghoon
+    email = sunghoon1kim@postech.ac.kr 
 ```
 ### YouCompleteMe:
  ```sh 
@@ -48,10 +49,10 @@ For more info about autocomplete see this blog (https://johngrib.github.io/wiki/
 
 ### How to update it
 ```sh
-#It will destroy any change in those files, but not in .bash_independent. Go to dotfiles directory
+#It will destroy any change in those files, but not in .gitconfig.local. Go to dotfiles directory
 $ cd ~/.dotfiles && git fetch --all && git reset --hard origin/master
 
-# This will not delete the .bash_independent file.
+# This will not delete the .gitconfig.local
 ```
 
 
