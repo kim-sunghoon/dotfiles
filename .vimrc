@@ -1,6 +1,6 @@
 " vim : foldmethod=marker :
 " original code from Vicente Adolfo Bolea Sanchez 
-" modified by sunghoon kim
+" modified by Sunghoon Kim
 " https://bluesh55.github.io/2016/10/09/vim-ide/
 " http://agvim.wordpress.com/2017/09/05/vim-plugins-50/
 "Bundle {{{
@@ -15,11 +15,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-"Synthstic check -- pylint... is too slow
-"Plugin 'scrooloose/syntastic'
-"https://github.com/w0rp/ale -- 
+"""Synthstic check -- pylint... is too slow
+" Plugin 'scrooloose/syntastic'
+""" https://github.com/w0rp/ale -- good but leaves xsim.dir/ log and pb files
 Plugin 'w0rp/ale'
-" 괄호 자동완성 delimiMate 
+""" 괄호 자동완성 delimiMate 
 Plugin 'Raimondi/delimitMate'
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-ruby/vim-ruby'
@@ -30,25 +30,23 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 "github.com/luochen1990/rainbow
 Plugin 'luochen1990/rainbow'
-" csv 파일 다루기 --  github.com/chrisbra/csv.vim 
+"""csv 파일 다루기 --  github.com/chrisbra/csv.vim 
 Plugin 'chrisbra/csv.vim'
-" vim 정렬하기 - 사용법: 비쥬얼 블럭 후 gl,  비쥬얼블록친부분 왼쪽 기준 , 로 정렬! http://github.com/tommcdo/vim-lion 
+""" vim 정렬하기 - 사용법: 비쥬얼 블럭 후 gl,  비쥬얼블록친부분 왼쪽 기준 , 로 정렬! http://github.com/tommcdo/vim-lion 
 Plugin 'tommcdo/vim-lion'
 " auto commenter
 Plugin 'scrooloose/nerdcommenter'
-" 증가 감소 시키기 visual block 잡은 후 :I 1 :I -1, :II 2 0, :II 2
+""" 증가 감소 시키기 visual block 잡은 후 :I 1 :I -1, :II 2 0, :II 2
 Plugin 'VisIncr'
-Plugin 'patstockwell/vim-monokai-tasty'
-Plugin 'kristijanhusak/vim-hybrid-material'
 " indent line 
 Plugin 'Yggdroot/indentLine'
 " smooth scroll
 Plugin 'terryma/vim-smooth-scroll'
-"Vim auto compete - vim8 is needed // need complie for using YoucompleteMe  
-" https://johngrib.github.io/wiki/vim-ycm-python3/
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 'SirVer/ultisnips'
-" Plugin 'honza/vim-snippets'
+""" Vim auto compete - vim8 is needed // need complie for using YoucompleteMe  
+""" https://johngrib.github.io/wiki/vim-ycm-python3/
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 call vundle#end()
 " }}}
 "설정을 추가한 후에 :w로 저장한 후 변경된 .vimrc 파일을 :source % 또는 :so %
@@ -63,12 +61,10 @@ set background=dark
 let g:solarized_termcolors=256
 let g:solarized_diffmode="high"
 set term=screen-256color
-" colorscheme solarized
+colorscheme solarized
 " colorscheme distinguished
 " colorscheme xoria256
-" colorscheme molokai
-colorscheme badwolf
-" colorscheme vim-monokai-tasty
+" colorscheme badwolf
 "## More options
 set ruler
 set incsearch
@@ -127,6 +123,7 @@ map <silent> <F4> :tabnew<Enter>
 map <silent> <F9> :NERDTreeToggle<Enter>
 
 map <silent> <F10> :Tagbar<Enter>
+
 "Customized shortcuts
  
 nnoremap <silent> <space>q :q<cr>
@@ -144,6 +141,7 @@ nnoremap <silent> <space>t :SyntasticCheck<CR>
 nnoremap <silent> <space>T :SyntasticReset<CR>
 nnoremap <silent> <space>r :SyntasticToggleMode<CR>
 nnoremap <silent> <space>/ :nohlsearch<CR>
+" abbreviation
 ab W w
 ab Wq wq
 ab wQ wq
@@ -159,17 +157,17 @@ let g:ale_sign_error = '!X'
 let g:ale_sign_warning = '!W'
 let g:ale_statusline_format = [' %d E', ' %d W ', '']
 "}}}
-" Syntastic https://github.com/vim-syntastic/syntastic {{{
+""" Syntastic https://github.com/vim-syntastic/syntastic {{{
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
-" "
+"""
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 "" }}}
-"NERDTree "{{{
+"""NERDTree {{{
 let g:NERDChristmasTree = 1
 let g:NERDTreeHighlightCursorline = 1
 let g:NERDTreeShowBookmarks = 1
@@ -206,7 +204,7 @@ nnoremap <c>gg :YcmCompleter GoToImprecise<CR>
 nnoremap <c>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <c>t :YcmCompleter GetType<CR>
 nnoremap <c>p :YcmCompleter GetParent<CR>
-""" from commnet in https://github.com/johngrib/simple_vim_guide/blob/master/md/vimrc.md 
+""" from https://github.com/johngrib/simple_vim_guide/blob/master/md/vimrc.md 
 set omnifunc=syntaxcomplete#Complete
 "}}}
 "" ultisnips {{{
@@ -217,9 +215,7 @@ let g:UltiSnipsEditSplit="vertical"
 """ let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips']
 let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 "}}}
-" Signature {{{
-let g:snips_author = $GIT_AUTHOR_NAME
-" }}}
+
 " Fugitive {{{
 set diffopt+=vertical
 set updatetime=250
@@ -246,13 +242,13 @@ let b:lion_squeeze_spaces = 1
 "Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
- let g:NERDCompactSexyComs = 1
+ let g:NERDCompactSexyComs = 0
 " " Align line-wise comment delimiters flush left instead of following code  indentation
 let g:NERDDefaultAlign = 'left'
 " " Set a language to use its alternate delimiters by default
 let g:NERDAltDelims_java = 1
 " " Add your own custom formats or override the defaults
-" let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCustomDelimiters = { 'c': { 'left': '//','right': '' } }
 " " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
 " " Enable trimming of trailing whitespace when uncommenting
@@ -289,7 +285,7 @@ set smartindent
 set showmatch
 set langmap=ㅁㅠㅊㅇㄷㄹㅎㅗㅑㅓㅏㅣㅡㅜㅐㅔㅂㄱㄴㅅㅕㅍㅈㅌㅛㅋ;abcdefghijklmnopqrstuvwxyz
 "set paste" 붙여넣기 계단현상 없애기
-"select all
+""" select all
 map <c-1> ggVG <cr>
 imap <c-1> <esc> ggVG <cr> i
 set diffopt=vertical
