@@ -42,7 +42,7 @@ Plugin 'VisIncr'
 Plugin 'Yggdroot/indentLine'
 " smooth scroll
 Plugin 'terryma/vim-smooth-scroll'
-""" Vim auto compete - vim8 is needed // need complie for using YoucompleteMe  
+""" Vim auto compete - requires vim8 // you must compile to use YoucompleteMe  
 """ https://johngrib.github.io/wiki/vim-ycm-python3/
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
@@ -50,7 +50,7 @@ Plugin 'honza/vim-snippets'
 call vundle#end()
 " }}}
 "설정을 추가한 후에 :w로 저장한 후 변경된 .vimrc 파일을 :source % 또는 :so %
-"vim 명령 모드에서 :PluginInstall을 실행, :PluginList -- 뭐 깔렸나 보기, PluginClean -- 제거
+"vim 명령 모드에서 :PluginInstall을 실행, :PluginList -- Plugin 깔렸나 보기, PluginClean -- 제거
 filetype plugin indent on
 filetype plugin on
 filetype indent on
