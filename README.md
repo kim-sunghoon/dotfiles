@@ -35,8 +35,8 @@ The file should contain these lines, but change my name and email for yours:
 
 ```sh
 [user]
-    name = kim-sunghoon
-    email = sunghoon1kim@postech.ac.kr 
+    name = "YOUR GITHUB NAME"
+    email = "YOUR GITHUB EMAIL"
 ```
 ### YouCompleteMe:
  ```sh 
