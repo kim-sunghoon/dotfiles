@@ -4,7 +4,7 @@
 
 
 
-1. Features:
+## 1. Features:
  - Only depends on GIT
  - It was designed having in mind being forked so that you can freely modify it.
  - As well if you are not going to modify you can just download it.
@@ -16,7 +16,7 @@
  - Few extras such as fonts and dircolors.
  - More..
 
-2. Install it
+## 2. Install it
     
 ```sh
 # First, make sure you have git installed, if not run the next command if you are in ubuntu:
@@ -27,17 +27,17 @@ $ git clone --recursive https://github.com/kim-sunghoon/dotfiles.git .dotfiles \
     && cd .dotfiles && ./bin/dfm install && vim +PluginUpdate
 ```
 
-3. Required Modules 
+## 3. Required Modules 
 
 ```sh
 module load vim/8.1
 module load anaconda 
 ```
 or put these in your `.tcshrc` in your home directory.
-    ** vim 8.1 is required for running YouCompleteMe Plugin **
-    ** vim 8.1 is not working RTL server in CSDL, works fine in other servers (CNN, HDL, etc.) **
+ - *vim 8.1 is required for running YouCompleteMe Plugin.*
+ - *vim 8.1 is not working RTL server in CSDL, works fine in other servers (CNN, HDL, etc.)*
 
-4. Github Author  
+## 4. Github Author  
 Change `.gitconfig.local` in your home directory. 
 The file should contain these lines, but change my name and email for yours:
 
@@ -47,23 +47,23 @@ The file should contain these lines, but change my name and email for yours:
     email = "YOUR GITHUB EMAIL"
 ```
 
-5. YouCompleteMe:
+## 5. YouCompleteMe - Auto Complete Module in Vim
  ```sh 
  cd ~/.vim/bundle/YouCompleteMe 
  python install.py --clang-completer  
- 
  ```
 
 For more info about autocomplete see this blog (https://johngrib.github.io/wiki/vim-auto-completion/)
 
-6. Uninstall YouCompleteMe and other plugins
-    1. `open .vimrc` then press `z + r` to unfold markers
-    2. delete or commmet plugin load line like `Plugin 'Valloric/YouCompleteMe'`
-    3. save .vimrc and reload it (`:w` and `:so %` in command mode)
-    4. type `:PluginClean` in command mode!
-        - other options: `:PluginInstall` , `:PluginList`
+## 6. Uninstall YouCompleteMe and other plugins
+    
+1. `open .vimrc` then press `z + r` to unfold markers
+2. delete or commmet plugin load line like `Plugin 'Valloric/YouCompleteMe'`
+3. save .vimrc and reload it (`:w` and `:so %` in command mode)
+4. type `:PluginClean` in command mode!
+- other options: `:PluginInstall` , `:PluginList`
 
-7. How to update it
+## 7. How to update it
 ```sh
 #It will destroy any change in those files, but not in .gitconfig.local. Go to dotfiles directory
 $ cd ~/.dotfiles && git fetch --all && git reset --hard origin/master
