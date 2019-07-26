@@ -61,10 +61,11 @@ set background=dark
 let g:solarized_termcolors=256
 let g:solarized_diffmode="high"
 set term=screen-256color
-colorscheme solarized
+" colorscheme solarized
 " colorscheme distinguished
 " colorscheme xoria256
-" colorscheme badwolf
+colorscheme badwolf
+
 "## More options
 set ruler
 set incsearch
@@ -179,7 +180,7 @@ let g:tagbar_width = 30
 "}}}
 """ YouCompleteMe {{{
 """ need to compile after install --- cd ~/.vim/bundle/YouCompleteMe && python install.py --clang-completer  
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.dotfiles/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 """To avoid conflict snippets
 let g:ycm_key_list_select_completion = ['<c-j>', '<Down>']
