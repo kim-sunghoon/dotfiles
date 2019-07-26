@@ -3,7 +3,8 @@
 ![Alt Text](https://raw.github.com/vicentebolea/dotfiles/master/screenshot.gif "My personal configuration for the Linux terminal with 256 colors")
 
 
-## Features:
+
+1. Features:
  - Only depends on GIT
  - It was designed having in mind being forked so that you can freely modify it.
  - As well if you are not going to modify you can just download it.
@@ -15,7 +16,7 @@
  - Few extras such as fonts and dircolors.
  - More..
 
-## Install it
+2. Install it
     
 ```sh
 # First, make sure you have git installed, if not run the next command if you are in ubuntu:
@@ -26,11 +27,18 @@ $ git clone --recursive https://github.com/kim-sunghoon/dotfiles.git .dotfiles \
     && cd .dotfiles && ./bin/dfm install && vim +PluginUpdate
 ```
 
-### Personal costumization
+3. Required Modules 
 
-__The only configuration needed for vicente's dotfiles__ should be inside of a file 
-called `.gitconfig.local` in your home directory. 
+```sh
+module load vim/8.1
+module load anaconda 
+```
+or put these in your `.tcshrc` in your home directory.
+    ** vim 8.1 is required for running YouCompleteMe Plugin **
+    ** vim 8.1 is not working RTL server in CSDL, works fine in other servers (CNN, HDL, etc.) **
 
+4. Github Author  
+Change `.gitconfig.local` in your home directory. 
 The file should contain these lines, but change my name and email for yours:
 
 ```sh
@@ -38,7 +46,8 @@ The file should contain these lines, but change my name and email for yours:
     name = "YOUR GITHUB NAME"
     email = "YOUR GITHUB EMAIL"
 ```
-### YouCompleteMe:
+
+5. YouCompleteMe:
  ```sh 
  cd ~/.vim/bundle/YouCompleteMe 
  python install.py --clang-completer  
@@ -47,7 +56,14 @@ The file should contain these lines, but change my name and email for yours:
 
 For more info about autocomplete see this blog (https://johngrib.github.io/wiki/vim-auto-completion/)
 
-### How to update it
+6. Uninstall YouCompleteMe and other plugins
+    1. `open .vimrc` then press `z + r` to unfold markers
+    2. delete or commmet plugin load line like `Plugin 'Valloric/YouCompleteMe'`
+    3. save .vimrc and reload it (`:w` and `:so %` in command mode)
+    4. type `:PluginClean` in command mode!
+        - other options: `:PluginInstall` , `:PluginList`
+
+7. How to update it
 ```sh
 #It will destroy any change in those files, but not in .gitconfig.local. Go to dotfiles directory
 $ cd ~/.dotfiles && git fetch --all && git reset --hard origin/master
@@ -58,7 +74,7 @@ $ cd ~/.dotfiles && git fetch --all && git reset --hard origin/master
 
 ## Authors
  - [Vicente Adolfo Bolea Sanchez][vicente].
-
+ - modified by [Sunghoon Kim](https://github.com/kim-sunghoon)
 ## Thanks to
  - [DFM][dfm]:                    a.k.a Dot Files Manager, made possible having the dotfiles in a separated directory.
  - [mathiasbynens/dotfiles][mat]: Some of the ideas are taking from this repository.
